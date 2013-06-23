@@ -16,5 +16,40 @@
     = javascript_include_tag "vendor/custom.modernizr"
     = csrf_meta_tags
   %body
-    = yield
     = javascript_include_tag "application"
+
+    / Header and Nav
+    .row
+      .large-12.columns
+        .panel
+          %h1 Feed Template
+    / End Header and Nav
+    .row
+      = yield
+      / On small devices this column is hidden
+      %aside.large-3.columns.hide-for-small
+        %p
+          %img{:src => "http://placehold.it/300x440&text=[ad]"}/
+        %p
+          %img{:src => "http://placehold.it/300x440&text=[ad]"}/
+    / Footer
+    %footer.row
+      .large-12.columns
+        %hr/
+        .row
+          .large-5.columns
+            %p © Copyright no one at all. Go to town.
+          .large-7.columns
+            %ul.inline-list.right
+              %li
+                %a{:href => "#"} Section 1
+              %li
+                %a{:href => "#"} Section 2
+              %li
+                %a{:href => "#"} Section 3
+              %li
+                %a{:href => "#"} Section 4
+              %li
+                %a{:href => "#"} Section 5
+              %li
+                %a{:href => "#"} Section 6
